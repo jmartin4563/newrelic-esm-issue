@@ -5,7 +5,8 @@
   "description": "Example to demonstrate issue with APM",
   "main": "server.js",
   "scripts": {
-    "dev": "node -r dotenv/config --experimental-loader newrelic/esm-loader.mjs server.js"
+    "dev": "NEW_RELIC_APP_NAME=weird-repro-esm node -r dotenv/config --experimental-loader newrelic/esm-loader.mjs server.js",
+    "dev:cjs": "NEW_RELIC_APP_NAME=weird-repro-cjs node -r dotenv/config -r newrelic server.cjs"
   },
   "keywords": [],
   "author": "",
