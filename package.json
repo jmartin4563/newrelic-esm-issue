@@ -5,8 +5,7 @@
   "description": "Example to demonstrate issue with APM",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "dotenv-run -- nodemon --experimental-loader newrelic/esm-loader.mjs"
+    "dev": "node -r dotenv/config --experimental-loader newrelic/esm-loader.mjs server.js"
   },
   "keywords": [],
   "author": "",
@@ -15,8 +14,5 @@
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "newrelic": "^10.4.1"
-  },
-  "devDependencies": {
-    "@dotenv-run/cli": "^0.5.0"
   }
 }
