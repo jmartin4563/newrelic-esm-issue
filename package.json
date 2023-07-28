@@ -5,8 +5,9 @@
   "description": "Example to demonstrate issue with APM",
   "main": "server.js",
   "scripts": {
-    "dev": "NEW_RELIC_APP_NAME=weird-repro-esm node -r dotenv/config --experimental-loader newrelic/esm-loader.mjs server.js",
-    "dev:cjs": "NEW_RELIC_APP_NAME=weird-repro-cjs node -r dotenv/config -r newrelic server.cjs"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon -r newrelic",
+    "dev:inspect": "nodemon --inspect-brk -r newrelic"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +15,11 @@
   "dependencies": {
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "newrelic": "^10.4.1"
+    "newrelic": "^10.5.0",
+    "swagger-ui-express": "^5.0.0"
+  },
+  "devDependencies": {
+    "@dotenv-run/cli": "^0.5.0",
+    "nodemon": "^3.0.1"
   }
 }

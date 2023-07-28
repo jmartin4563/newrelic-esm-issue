@@ -18,8 +18,8 @@ Node version 18.16.0
 
 ## Hit end point a few times to send data
 
-`curl http://localhost:3000/weird/looking/path`
+`curl http://localhost:3000/weird1`
 
 ## Example
 
-![What it looks in in APM](./newrelic-apm-issue3.png)
+![What it looks like in APM](./newrelic-apm-issue4.png)
